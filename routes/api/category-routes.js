@@ -23,13 +23,13 @@ router.get("/:id", async (req, res) => {
       include: [{ model: Product }],
     });
     if (!categoryData) {
-      res.status(404).json({ message: "Not Found!"});
+      res.status(404).json({ message: "Not Found!" });
       return;
     }
     res.status(200).json(locationData);
   } catch (err) {
     res.status(500).json(err);
-  } 
+  }
 });
 
 // create a new category
@@ -44,15 +44,14 @@ router.post("/", async (req, res) => {
 
 // update a category by its `id` value
 router.put("/:id", async (req, res) => {
-  
   try {
     const categoryData = await Category.update(req.body, {
       where: {
-       id: req.params.id, 
+        id: req.params.id,
       },
     });
     if (!categoryData) {
-      res.status(404).json({ message: "Not Found!"});
+      res.status(404).json({ message: "Not Found!" });
       return;
     }
     res.status(200).json(categoryData);
@@ -65,10 +64,10 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const categoryData = await Category.destroy({
-      where: { id: req.params.id }
+      where: { id: req.params.id },
     });
     if (!categoryData) {
-      res.status(404).json({ message: 'Not Found!' });
+      res.status(404).json({ message: "Not Found!" });
       return;
     }
     res.status(200).json(categoryData);
