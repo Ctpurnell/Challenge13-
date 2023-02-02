@@ -49,7 +49,7 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    if (!tagData) {
+    if (!tagData[0]) {
       res.status(404).json({ message: "Not Found!" });
       return;
     }
@@ -65,7 +65,7 @@ router.delete("/:id", async (req, res) => {
     const tagData = await Tag.destroy({
       where: { id: req.params.id },
     });
-    if (!tagData) {
+    if (!tagData[0]) {
       res.status(404).json({ message: "Not Found!" });
       return;
     }
