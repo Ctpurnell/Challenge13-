@@ -14,9 +14,13 @@ Once you have confirmed you are listening on port 3001, open Insomnia to test th
 
 ## Mock-up
 
-To view this project in it's working form click the following links:
+To view this project in it's working form click the following links:(PLEASE forgive the slowness of my computer)
+
+https://drive.google.com/file/d/1o48UbOpGZJN3GuTiF3pmoGZTeILjB2n3/preview
 
 The gitHub repository for this assignment can be found at:
+
+https://github.com/Ctpurnell/Challenge13-
 
 ## Credits
 
